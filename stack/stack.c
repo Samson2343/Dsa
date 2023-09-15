@@ -1,9 +1,12 @@
 #include "stack.h"
 #include<stdio.h>
+#include<stdlib.h>
 
 //create stack
-void createStack(stack *stack){
-    stack->top = -1;
+struct stack* createStack(){
+        stack *s = (stack *)malloc(sizeof(stack));
+        s->top = -1;
+        return s;
 }
 
 int isFull(stack *stack){
@@ -51,3 +54,6 @@ void printStack(stack* stack){
     }
 }
 
+char peek(stack* stack){
+
+}

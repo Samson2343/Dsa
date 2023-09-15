@@ -1,7 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#define SIZE 10
+#define SIZE 50
 struct stack
 {
     int top;
@@ -9,11 +9,12 @@ struct stack
 };
 typedef struct stack stack;
 
-void createStack(stack * stack);
+stack* createStack();
 int isFull(stack *stack);
 int isEmpty(stack *stack);
 void push(stack *stack,char data);
 char pop(stack *stack);
+char peek(stack *stack);
 void printStack(stack *stack);
 
 #endif
