@@ -2,7 +2,7 @@
 #define INFIX_TO_POSTFIX_H
 
 int precedence(char operator);
-int isOperand(char c);
+int isOperator(char c);
 char* infixToPostfix(char * infix);
 
 
