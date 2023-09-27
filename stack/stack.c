@@ -54,6 +54,7 @@ void printStack(stack* stack){
     }
 }
 
+//TO DO
 char peek(stack* stack){
 
 }
