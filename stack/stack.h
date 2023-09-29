@@ -14,7 +14,7 @@ int isFull(stack *stack);
 int isEmpty(stack *stack);
 void push(stack *stack,char data);
 char pop(stack *stack);
-char peek(stack *stack);
+char peek(stack *stack);  //TO DO
 void printStack(stack *stack);
 
 #endif
