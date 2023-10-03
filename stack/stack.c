@@ -52,7 +52,7 @@ void printStack(stack* stack){
     }
 }
 
-//TO DO
-int peek(stack* stack){
-    
-    }
+char peek(stack* stack){
+    char x = stack[top];
+    return x;
+}

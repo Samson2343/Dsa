@@ -20,4 +20,14 @@ void preorderTraversal(node* root){
     preorderTraversal(root->right);
 }
 
+//  POSTORDER TRAVERSAL
+void postorderTraversal(node* root){
+    if(root == NULL)
+    return;
+    postorderTraversal(root->left);
+    postorderTraversal(root->right);
+    printf("%d->", root->data);
+}
+
+
 

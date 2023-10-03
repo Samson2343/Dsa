@@ -50,3 +50,27 @@ char* infixToPostfix(char * infix){
     postfix[j] = '\0';
     return postfix;
 }
+
+int precedence(char operator)
+{
+    switch (operator) {
+    case '+':
+    case '-':
+        return 1;
+    case '*':
+    case '/':
+        return 2;
+    case '^':
+        return 3;
+    default:
+        return -1;
+    }
+}
+  
+// Function to check if the scanned character 
+// is an operator
+int isOperator(char ch)
+{
+    return (ch == '+' || ch == '-' || ch == '*' || ch == '/'
+            || ch == '^');
+}
