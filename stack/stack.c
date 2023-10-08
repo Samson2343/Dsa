@@ -52,7 +52,7 @@ void printStack(stack* stack){
     }
 }
 
-char peek(stack* stack){
-    char x = stack[top];
+int peek(stack* stack){
+    int x = stack->items[stack->top];
     return x;
 }

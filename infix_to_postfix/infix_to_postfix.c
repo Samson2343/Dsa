@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "infix_to_postfix.h"
 #include "../stack/stack.h"
 
@@ -34,7 +35,7 @@ char* infixToPostfix(char * infix){
         }
 
         else if(isOperator(infix[i])){
-            while(!isEmpty && precedence(peek(s))>=precedence(infix[i]))
+            while(!isEmpty(s) && precedence(peek(s))>=precedence(infix[i]))
             postfix[j++] =  pop(s);
             push(s,infix[i]);
         }
