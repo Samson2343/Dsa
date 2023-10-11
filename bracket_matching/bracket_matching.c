@@ -3,7 +3,14 @@
 
 int isMatching(char character1, char character2)
 {
-  // TO BE IMPLEMENTED
+  if (character1 == '(' && character2 == ')')
+    return 1;
+  else if (character1 == '{' && character2 == '}')
+    return 1;
+  else if (character1 == '[' && character2 == ']')
+    return 1;
+  else
+    return 0;
 }
 
 // fucntion to check if the brackets are balanced . Return 0 if not balanced or 1 if brackets are balanced
@@ -16,7 +23,7 @@ int areBracketsBalanced(char exp[])
 
     // checking for starting brackets and pushing to stack
     if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[')
-      puch(s, exp[i]);
+      push(s, exp[i]);
 
     // checking for ending bracket
     if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']')
