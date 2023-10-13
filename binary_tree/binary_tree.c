@@ -15,9 +15,9 @@ TreeNode *createNode(int data)
     return newNode;
 }
 
-void preorderTraversal(struct node* root) {
+void preorderTraversal(TreeNode* root) {
   if (root == NULL) return;
-  printf("%d ->", root->item);
+  printf("%d ->", root->data);
   preorderTraversal(root->left);
   preorderTraversal(root->right);
 }
